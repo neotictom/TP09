@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+<form action='@Url.Action("GuardarCuenta")' method="post">
+    <form class="row g-3">
+    <div class="col-md-6">
+    <label for="NombreUsuario" class="form-label">Usuario</label>
+    <input type="Text" class="form-control" id="NombreUsuario">
+  </div>
+  <div class="col-md-6">
+    <label for="Contraseña" class="form-label">Contraseña</label>
+    <input type="Text" class="form-control" id="Contraseña">
+  </div>
+  <div class="col-md-6">
+    <label for="Email" class="form-label">Email</label>
+    <input type="Text" class="form-control" id="Email">
+  </div>
+  <div class="col-12">
+    <label for="Telefono" class="form-label">Telefono</label>
+    <input type="number" class="form-control" id="Telefono" placeholder="Telefono">
+  </div>
+  <div class="col-12">
+    <label for="Nombre" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="Nombre" placeholder="Nombre">
+  </div>
+  <div class="col-md-6">
+    <label for="Apellido" class="form-label">Apellido</label>
+    <input type="text" class="form-control" id="Apellido">
+  </div>
+ 
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary"><a class="btn btn-info" href='@Url.Action("Bienvenida","Account")'>Sign in</a></button>
+  </div>
+</form>
+</form>
+</body>
+</html>
