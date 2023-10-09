@@ -13,19 +13,20 @@ public class AccountController : Controller
         _logger = logger;
     }
     public IActionResult Login(){
-        return View();
+       return View();
     }
     public IActionResult Registro(){
         return View();
     }
-    public IActionResult GuardarCuenta(Usuario user)
+    [HttpPost]public IActionResult GuardarCuenta(Usuarios user)
     {
-       
         BD.AgregarUsuario(user);    
-        return View("Bienvenida");
+        return RedirectToAction("Bienvenida", new { u = user.Usuario });
         
     }
-    public IActionResult Bienvenida(){
+    public IActionResult Bienvenida(string u){
+        Usuarios us = BD.GetUsuarioByUser(u);
+        ViewBag.User = us;
         return View();
     }
 
