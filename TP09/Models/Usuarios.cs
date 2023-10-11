@@ -3,7 +3,7 @@ namespace TP09.Models;
 public class Usuarios
 {
     
-public string Usuario{get; set;}
+public string NombreUsuario{get; set;}
 public string Contraseña{get;set;}
 public string Email{get;set;}
 public int Telefono{get;set;}

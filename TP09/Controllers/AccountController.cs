@@ -18,14 +18,15 @@ public class AccountController : Controller
     public IActionResult Registro(){
         return View();
     }
-    [HttpPost]public IActionResult GuardarCuenta(Usuarios user)
+    [HttpPost]
+    public IActionResult GuardarCuenta(Usuarios user)
     {
-        BD.AgregarUsuario(user);    
-        return RedirectToAction("Bienvenida", new { u = user.Usuario });
-        
+    BD.AgregarUsuario(user);
+    return RedirectToAction("Bienvenida", new { u = user.NombreUsuario });
     }
-    public IActionResult Bienvenida(string u){
-        Usuarios us = BD.GetUsuarioByUser(u);
+
+    public IActionResult Bienvenida(Usuarios u){
+        Usuarios us = BD.GetUsuarioByUserName(u);
         ViewBag.User = us;
         return View();
     }
