@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace TP09.Models;
 public class BD{
 
-    private static string _connectionString = @"Server=.; Database=Usuarios; Trusted_Connection=True";
+    private static string _connectionString = @"Server=.; Database=Login; Trusted_Connection=True";
     
  public static void AgregarUsuario(Usuarios u)
 {
