@@ -7,7 +7,7 @@
     <title>Registro</title>
 </head>
 <body>
-<form class="row g-3" action='@Url.Action("GuardarCuenta")' method="post">
+<form class="row g-3" action='@Url.Action("GuardarCuenta")' method="post" onsubmit="return ValidarRegistro()">
     
     <div class="col-md-6">
     <label for="NombreUsuario" class="form-label">Usuario</label>
